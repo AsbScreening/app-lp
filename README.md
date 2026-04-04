@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# kinyacho-lp
 
 キンヤチョの静的ランディングページ（LP）です。Cloudflare Pages での単独公開を前提に、HTML/CSS中心で実装しています。
@@ -19,7 +20,7 @@ http://localhost:8080
 
 3. モバイル表示を優先確認
 - ブラウザの開発者ツールで iPhone/Android 幅（320px〜430px程度）を中心に確認
-- ヒーロー、価格、CTA、FAQ の視認性を重点チェック
+- ヒーロー、価格、CTA、FAQ の視認性を重点
 
 ## Cloudflare Pages 前提の補足
 
@@ -35,3 +36,6 @@ http://localhost:8080
   - `og:url`
   - `og:image`
 - `/kinyacho/lp` 配下で配信する際、リバースプロキシやルーティング設定側で `index.html` が正しく返ることを確認してください。
+=======
+# kinyacho-lp
+>>>>>>> fe02b19fbd7bd05645dbc18f8bc4b857fafa7053
