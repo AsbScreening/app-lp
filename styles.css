@@ -496,9 +496,10 @@ a {
 }
 
 .support-form {
-  width: min(100%, 620px);
+  width: min(100%, 780px);
   display: grid;
   gap: 12px;
+  margin-inline: auto;
 }
 
 .form-field {
@@ -729,6 +730,19 @@ a {
   .pricing-grid {
     grid-template-columns: 1fr 1.15fr;
     align-items: stretch;
+  }
+
+  .support-shell {
+    padding: 28px 28px;
+  }
+
+  .support-lead {
+    max-width: 72ch;
+  }
+
+  .support-form {
+    width: min(100%, 860px);
+    margin-top: 8px;
   }
 
   .target-title-line {
