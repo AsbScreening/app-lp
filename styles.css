@@ -427,6 +427,60 @@ a {
   color: #4f5e58;
 }
 
+.pricing-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.price-plan {
+  background: linear-gradient(145deg, #f9fcfb 0%, #e5f4ef 100%);
+  border: 1px solid #b7cbc2;
+  border-radius: calc(var(--radius) + 4px);
+  padding: 18px 16px;
+  box-shadow: var(--shadow);
+}
+
+.price-plan__label {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #304840;
+  line-height: 1.2;
+}
+
+.price-plan__label span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5f57;
+  margin-left: 6px;
+}
+
+.price-plan__list {
+  margin: 12px 0 0;
+  padding-left: 1.1rem;
+  color: #4d5b55;
+}
+
+.price-plan__list li + li {
+  margin-top: 6px;
+}
+
+.price-plan--paid {
+  background: linear-gradient(145deg, #eefaf5 0%, #dff4eb 100%);
+  border-color: #93b8aa;
+}
+
+.price-plan--paid .price-plan__label {
+  font-size: clamp(1.65rem, 1.35rem + 1.1vw, 2.35rem);
+  color: #173d32;
+}
+
+.price-plan__note {
+  margin: 10px 0 0;
+  color: #3d5750;
+  font-size: 0.95rem;
+}
+
 .cta {
   border-radius: calc(var(--radius) + 8px);
   border: 1px solid #b6cac1;
@@ -579,6 +633,11 @@ a {
 
   .value-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr 1.15fr;
+    align-items: stretch;
   }
 
   .target-title-line {
