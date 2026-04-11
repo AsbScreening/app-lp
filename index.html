@@ -60,8 +60,10 @@
       <div class="container">
         <div class="target-panel">
           <p class="section-kicker">Who It Is For</p>
-          <h2 id="target-title">環境計量証明事業、調査会社、分析機関など、
-            現場の記録を、次の形に進めたいすべての方へ。</h2>
+          <h2 id="target-title">
+            <span class="target-title-line">環境計量証明事業、調査会社、分析機関など、</span>
+            <span class="target-title-line">現場の記録を、次の形に進めたいすべての方へ。</span>
+          </h2>
           <p>今の運用を活かしながら、将来のシステム導入に向けて現場で検証を進めたいチームに適しています。</p>
         </div>
       </div>
@@ -172,6 +174,16 @@
     </section>
   </main>
 
+  <dialog class="lightbox" id="screen-lightbox" aria-label="デモ画像の拡大表示">
+    <form method="dialog" class="lightbox__close-wrap">
+      <button class="lightbox__close" aria-label="拡大画像を閉じる">閉じる</button>
+    </form>
+    <figure class="lightbox__figure">
+      <img id="lightbox-image" src="" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </dialog>
+
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__brand">キンヤチョ</p>
@@ -184,5 +196,41 @@
       <small>&copy; キンヤチョ</small>
     </div>
   </footer>
+  <script>
+    (() => {
+      const dialog = document.getElementById("screen-lightbox");
+      const dialogImage = document.getElementById("lightbox-image");
+      const dialogCaption = document.getElementById("lightbox-caption");
+      const images = document.querySelectorAll(".screen-card img");
+
+      if (!dialog || !dialogImage || !dialogCaption || images.length === 0) return;
+
+      const openLightbox = (img) => {
+        const card = img.closest(".screen-card");
+        const title = card ? card.querySelector("h3") : null;
+        dialogImage.src = img.currentSrc || img.src;
+        dialogImage.alt = img.alt || "";
+        dialogCaption.textContent = title ? title.textContent : "";
+        dialog.showModal();
+      };
+
+      images.forEach((img) => {
+        img.setAttribute("role", "button");
+        img.setAttribute("tabindex", "0");
+        img.setAttribute("aria-label", `${img.alt || "デモ画像"} を拡大表示`);
+        img.addEventListener("click", () => openLightbox(img));
+        img.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openLightbox(img);
+          }
+        });
+      });
+
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -212,7 +212,12 @@ a {
 }
 
 .target-panel h2 {
-  max-width: 26ch;
+  max-width: 34ch;
+  line-height: 1.3;
+}
+
+.target-title-line {
+  display: block;
 }
 
 .target-panel p {
@@ -284,6 +289,15 @@ a {
   background: #ecf2ee;
   aspect-ratio: 9 / 19;
   object-fit: cover;
+  cursor: zoom-in;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.screen-card img:hover,
+.screen-card img:focus-visible {
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: 0 8px 18px rgba(35, 66, 55, 0.22);
+  outline: none;
 }
 
 .screen-card h3 {
@@ -426,6 +440,66 @@ a {
   color: #53625c;
 }
 
+.lightbox {
+  width: min(92vw, 820px);
+  border: 0;
+  border-radius: 18px;
+  padding: 14px 14px 18px;
+  background: rgba(239, 246, 242, 0.98);
+  box-shadow: 0 26px 58px rgba(16, 28, 23, 0.45);
+  opacity: 0;
+  transform: translateY(14px) scale(0.97);
+  transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
+.lightbox[open] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.lightbox::backdrop {
+  background: rgba(16, 25, 21, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+.lightbox__close-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 6px;
+}
+
+.lightbox__close {
+  border: 1px solid #9fb8ad;
+  border-radius: 999px;
+  background: #f7fbf9;
+  color: #2f4c41;
+  font: inherit;
+  font-size: 0.88rem;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.lightbox__figure {
+  margin: 0;
+}
+
+.lightbox__figure img {
+  width: min(100%, 760px);
+  max-height: 78vh;
+  margin-inline: auto;
+  border-radius: 14px;
+  border: 1px solid #bfd0c8;
+  object-fit: contain;
+  background: #eaf1ed;
+}
+
+.lightbox__figure figcaption {
+  margin-top: 10px;
+  text-align: center;
+  color: #3b4e46;
+  font-size: 0.95rem;
+}
+
 @media (min-width: 820px) {
   .site-header__inner {
     min-height: 74px;
@@ -450,7 +524,11 @@ a {
   .hero__lead {
     font-size: clamp(1rem, 0.88rem + 0.5vw, 1.15rem);
     line-height: 1.78;
-    max-width: 32ch;
+    max-width: 46ch;
+  }
+
+  .hero-lead-line {
+    white-space: nowrap;
   }
 
   .feature-grid {
@@ -459,6 +537,10 @@ a {
 
   .value-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .target-title-line {
+    white-space: nowrap;
   }
 
   .footer__inner {
