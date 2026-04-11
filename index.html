@@ -220,9 +220,6 @@
           <article class="store-card">
             <h3>Android版</h3>
             <p>現在テストプレイヤーを募集中です。ご協力いただける方はお問い合わせください。</p>
-            <a id="google-play-link" class="store-badge-link" aria-disabled="true" hidden>
-              <img id="google-play-badge" alt="Google Playで入手（公開後）" hidden>
-            </a>
             <a class="button button--ghost store-contact-link" href="#support">Android版テスト参加を問い合わせる</a>
           </article>
         </div>
@@ -363,9 +360,7 @@
   <script>
     (() => {
       const APP_STORE_URL = "";
-      const GOOGLE_PLAY_URL = "";
       const APPLE_BADGE_SRC = "./assets/badges/app-store-badge-jp.svg";
-      const GOOGLE_BADGE_SRC = "";
 
       const setupStoreBadge = ({ url, src, linkId, imageId, placeholderId }) => {
         const link = document.getElementById(linkId);
@@ -417,14 +412,6 @@
         linkId: "app-store-link",
         imageId: "app-store-badge",
         placeholderId: "app-store-placeholder"
-      });
-
-      setupStoreBadge({
-        url: GOOGLE_PLAY_URL,
-        src: GOOGLE_BADGE_SRC,
-        linkId: "google-play-link",
-        imageId: "google-play-badge",
-        placeholderId: ""
       });
     })();
   </script>
