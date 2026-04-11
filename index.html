@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -165,6 +165,29 @@
       </div>
     </section>
 
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">FAQ</p>
+          <h2 id="faq-title">よくある質問</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>チームで使う場合、テンプレートの共有はできますか？</summary>
+            <p>テンプレートはJSON形式で出力・入力できます。作成したテンプレートを他のユーザーに共有し、インポートすることで同じ設定を再現できます。チーム内で標準フォーマットとして展開することも可能です。</p>
+          </details>
+          <details class="faq-item">
+            <summary>記録データは出力できますか？</summary>
+            <p>JSON、CSV、PDF形式で出力できます。JSONやCSVとしてデータを取得すれば、用途に応じて加工し、任意の書式に対応できます。PDFでは簡易的な帳票として出力できるため、紙での提出が必要な場面にも使えます。</p>
+          </details>
+          <details class="faq-item">
+            <summary>記録に写真を添付することはできますか？</summary>
+            <p>各記録に写真を添付したり、その場で撮影したりできます。写真はZipファイルとしてまとめて出力できるため、現場での整理もスムーズに行えます。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="cta" aria-labelledby="cta-title">
       <div class="container cta">
         <h2 id="cta-title">まずは現場で、小さく試してみる</h2>
@@ -196,6 +219,7 @@
       <small>&copy; キンヤチョ</small>
     </div>
   </footer>
+
   <script>
     (() => {
       const dialog = document.getElementById("screen-lightbox");
