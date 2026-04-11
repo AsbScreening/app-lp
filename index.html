@@ -194,6 +194,45 @@
       </div>
     </section>
 
+    <section class="section" id="support" aria-labelledby="support-title">
+      <div class="container">
+        <div class="support-shell">
+          <div class="section-head">
+            <p class="section-kicker">Support</p>
+            <h2 id="support-title">導入・運用サポート</h2>
+          </div>
+          <p class="support-lead">本アプリの導入や運用について、製作者がサポートいたします。テンプレート設計や運用方法のご相談など、実際の業務に合わせた活用方法をご提案可能です。</p>
+
+          <form id="contact-form" class="support-form" novalidate>
+            <label class="form-field">
+              <span>名前 <em>必須</em></span>
+              <input type="text" name="name" autocomplete="name" required placeholder="お名前">
+            </label>
+
+            <label class="form-field">
+              <span>会社名 <small>任意</small></span>
+              <input type="text" name="company" autocomplete="organization" placeholder="会社名（任意）">
+            </label>
+
+            <label class="form-field">
+              <span>メールアドレス <em>必須</em></span>
+              <input type="email" name="email" autocomplete="email" required placeholder="メールアドレス">
+            </label>
+
+            <label class="form-field">
+              <span>お問い合わせ内容 <em>必須</em></span>
+              <textarea name="message" required placeholder="お問い合わせ内容"></textarea>
+            </label>
+
+            <button id="contact-submit" type="submit" class="button button--primary support-submit">
+              送信する
+            </button>
+            <p id="contact-status" class="support-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <div class="section-head">
@@ -282,6 +321,53 @@
 
       dialog.addEventListener("click", (event) => {
         if (event.target === dialog) dialog.close();
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("contact-status");
+      const submit = document.getElementById("contact-submit");
+
+      if (!form || !status || !submit) return;
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (!form.reportValidity()) return;
+
+        submit.disabled = true;
+        status.textContent = "送信中です。しばらくお待ちください。";
+        status.dataset.state = "loading";
+
+        const payload = {
+          name: form.name.value.trim(),
+          company: form.company.value.trim(),
+          email: form.email.value.trim(),
+          message: form.message.value.trim()
+        };
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+
+          if (!response.ok) {
+            throw new Error("送信に失敗しました");
+          }
+
+          form.reset();
+          status.textContent = "お問い合わせを送信しました。担当者よりご連絡します。";
+          status.dataset.state = "success";
+        } catch (error) {
+          status.textContent = "送信に失敗しました。時間をおいて再度お試しください。";
+          status.dataset.state = "error";
+        } finally {
+          submit.disabled = false;
+        }
       });
     })();
   </script>
