@@ -46,8 +46,8 @@ export async function onRequestPost(context) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      from: "support@yourdomain.com",
-      to: "your@zoho.com",
+      from: "support@asb-screening.com",
+      to: "info@asb-screening.com",
       subject: "New inquiry from LP",
       html: `
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
