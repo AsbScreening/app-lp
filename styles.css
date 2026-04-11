@@ -481,6 +481,76 @@ a {
   font-size: 0.95rem;
 }
 
+.store-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.store-card {
+  background: linear-gradient(145deg, #f9fcfb 0%, #e5f4ef 100%);
+  border: 1px solid #b7cbc2;
+  border-radius: calc(var(--radius) + 4px);
+  padding: 18px 16px;
+  box-shadow: var(--shadow);
+}
+
+.store-card h3 {
+  margin: 0;
+  font-size: 1.16rem;
+}
+
+.store-card p {
+  margin: 8px 0 0;
+  color: #4d5b55;
+}
+
+.store-badge-link {
+  margin-top: 12px;
+  min-height: 42px;
+  width: fit-content;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.store-badge-link img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.store-badge-link.is-disabled {
+  opacity: 0.64;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.store-badge-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px dashed #a2b9af;
+  border-radius: 10px;
+  color: #4d5e57;
+  font-size: 0.88rem;
+  background: #f5faf8;
+}
+
+.store-subnote {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #5b6b65;
+}
+
+.store-contact-link {
+  margin-top: 12px;
+}
+
 .support-shell {
   background: linear-gradient(145deg, #f9fcfb 0%, #e8f3ee 100%);
   border: 1px solid #b7cbc2;
@@ -495,6 +565,13 @@ a {
   width: min(100%, 860px);
   margin-inline: auto;
   line-height: 1.8;
+}
+
+.support-note {
+  margin: -2px auto 14px;
+  width: min(100%, 860px);
+  color: #3f5850;
+  font-size: 0.95rem;
 }
 
 .support-form {
@@ -732,6 +809,10 @@ a {
   .pricing-grid {
     grid-template-columns: 1fr 1.15fr;
     align-items: stretch;
+  }
+
+  .store-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .support-shell {

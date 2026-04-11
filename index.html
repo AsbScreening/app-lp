@@ -34,6 +34,7 @@
         <a href="#value">価値</a>
         <a href="#features">機能</a>
         <a href="#pricing">料金</a>
+        <a href="#distribution">配信状況</a>
       </nav>
     </div>
   </header>
@@ -199,6 +200,36 @@
       </div>
     </section>
 
+    <section class="section section--accent" id="distribution" aria-labelledby="distribution-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Availability</p>
+          <h2 id="distribution-title">アプリ入手案内</h2>
+        </div>
+        <div class="store-grid">
+          <article class="store-card">
+            <h3>iPhone版</h3>
+            <p>現在App Store審査中です。公開後、App Storeよりダウンロードいただけます。</p>
+            <a id="app-store-link" class="store-badge-link" aria-disabled="true">
+              <img id="app-store-badge" alt="App Storeからダウンロード" hidden>
+              <span id="app-store-placeholder" class="store-badge-placeholder">App Store公式バッジを表示予定</span>
+            </a>
+            <p class="store-subnote">公開後はApp Store URLを設定すると有効化されます。</p>
+          </article>
+
+          <article class="store-card">
+            <h3>Android版</h3>
+            <p>現在テストプレイヤーを募集中です。ご協力いただける方はお問い合わせください。</p>
+            <a id="google-play-link" class="store-badge-link" aria-disabled="true">
+              <img id="google-play-badge" alt="Google Playで手に入れよう" hidden>
+              <span id="google-play-placeholder" class="store-badge-placeholder">Google Play公式バッジを配置予定</span>
+            </a>
+            <a class="button button--ghost store-contact-link" href="#support">Android版テスト参加を問い合わせる</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="support" aria-labelledby="support-title">
       <div class="container">
         <div class="support-shell">
@@ -207,6 +238,7 @@
             <h2 id="support-title">導入・運用サポート</h2>
           </div>
           <p class="support-lead">本アプリの導入や運用について、製作者がサポートいたします。テンプレート設計や運用方法のご相談など、実際の業務に合わせた活用方法をご提案可能です。</p>
+          <p class="support-note">Android版のテスト参加をご希望の方も、こちらからお問い合わせください。</p>
 
           <form id="contact-form" class="support-form" novalidate>
             <label class="form-field">
@@ -326,6 +358,68 @@
 
       dialog.addEventListener("click", (event) => {
         if (event.target === dialog) dialog.close();
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      const APP_STORE_URL = "";
+      const GOOGLE_PLAY_URL = "";
+      const APPLE_BADGE_SRC = "./assets/badges/app-store-badge-jp.svg";
+      const GOOGLE_BADGE_SRC = "";
+
+      const setupStoreBadge = ({ url, src, linkId, imageId, placeholderId }) => {
+        const link = document.getElementById(linkId);
+        const image = document.getElementById(imageId);
+        const placeholder = document.getElementById(placeholderId);
+        if (!link || !image || !placeholder) return;
+
+        const hasUrl = Boolean(url);
+        const hasSrc = Boolean(src);
+
+        if (hasUrl) {
+          link.href = url;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.removeAttribute("aria-disabled");
+        } else {
+          link.removeAttribute("href");
+          link.setAttribute("aria-disabled", "true");
+          link.classList.add("is-disabled");
+        }
+
+        if (hasSrc) {
+          image.src = src;
+          image.hidden = false;
+          placeholder.hidden = true;
+          image.addEventListener("error", () => {
+            image.hidden = true;
+            placeholder.hidden = false;
+            link.classList.add("is-disabled");
+            link.removeAttribute("href");
+            link.setAttribute("aria-disabled", "true");
+          });
+        } else {
+          image.hidden = true;
+          placeholder.hidden = false;
+          link.classList.add("is-disabled");
+        }
+      };
+
+      setupStoreBadge({
+        url: APP_STORE_URL,
+        src: APPLE_BADGE_SRC,
+        linkId: "app-store-link",
+        imageId: "app-store-badge",
+        placeholderId: "app-store-placeholder"
+      });
+
+      setupStoreBadge({
+        url: GOOGLE_PLAY_URL,
+        src: GOOGLE_BADGE_SRC,
+        linkId: "google-play-link",
+        imageId: "google-play-badge",
+        placeholderId: "google-play-placeholder"
       });
     })();
   </script>
