@@ -492,7 +492,9 @@ a {
 .support-lead {
   margin: 0 0 14px;
   color: #4d5b55;
-  max-width: 62ch;
+  width: min(100%, 860px);
+  margin-inline: auto;
+  line-height: 1.8;
 }
 
 .support-form {
@@ -737,7 +739,7 @@ a {
   }
 
   .support-lead {
-    max-width: 72ch;
+    width: min(100%, 860px);
   }
 
   .support-form {
