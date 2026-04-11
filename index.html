@@ -220,9 +220,8 @@
           <article class="store-card">
             <h3>Android版</h3>
             <p>現在テストプレイヤーを募集中です。ご協力いただける方はお問い合わせください。</p>
-            <a id="google-play-link" class="store-badge-link" aria-disabled="true">
-              <img id="google-play-badge" alt="Google Playで手に入れよう" hidden>
-              <span id="google-play-placeholder" class="store-badge-placeholder">Google Play公式バッジを配置予定</span>
+            <a id="google-play-link" class="store-badge-link" aria-disabled="true" hidden>
+              <img id="google-play-badge" alt="Google Playで入手（公開後）" hidden>
             </a>
             <a class="button button--ghost store-contact-link" href="#support">Android版テスト参加を問い合わせる</a>
           </article>
@@ -371,8 +370,8 @@
       const setupStoreBadge = ({ url, src, linkId, imageId, placeholderId }) => {
         const link = document.getElementById(linkId);
         const image = document.getElementById(imageId);
-        const placeholder = document.getElementById(placeholderId);
-        if (!link || !image || !placeholder) return;
+        const placeholder = placeholderId ? document.getElementById(placeholderId) : null;
+        if (!link || !image) return;
 
         const hasUrl = Boolean(url);
         const hasSrc = Boolean(src);
@@ -391,17 +390,23 @@
         if (hasSrc) {
           image.src = src;
           image.hidden = false;
-          placeholder.hidden = true;
+          if (placeholder) placeholder.hidden = true;
+          link.hidden = false;
           image.addEventListener("error", () => {
             image.hidden = true;
-            placeholder.hidden = false;
-            link.classList.add("is-disabled");
-            link.removeAttribute("href");
-            link.setAttribute("aria-disabled", "true");
+            if (placeholder) {
+              placeholder.hidden = false;
+            } else {
+              link.hidden = true;
+            }
           });
         } else {
           image.hidden = true;
-          placeholder.hidden = false;
+          if (placeholder) {
+            placeholder.hidden = false;
+          } else {
+            link.hidden = true;
+          }
           link.classList.add("is-disabled");
         }
       };
@@ -419,7 +424,7 @@
         src: GOOGLE_BADGE_SRC,
         linkId: "google-play-link",
         imageId: "google-play-badge",
-        placeholderId: "google-play-placeholder"
+        placeholderId: ""
       });
     })();
   </script>
