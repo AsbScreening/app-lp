@@ -31,11 +31,21 @@
 ├─ functions/
 │  └─ api/
 │     └─ contact.js
+├─ kinyacho/
+│  └─ index.html
+├─ photowake/
+│  └─ index.html
 ├─ styles/
 │  ├─ common.css
-│  └─ kinyacho.css
+│  ├─ hub.css
+│  ├─ kinyacho.css
+│  └─ photowake.css
+├─ apple-touch-icon.png
+├─ favicon.ico
+├─ favicon.svg
 ├─ index.html
 ├─ privacy.html
-├─ tokutei.html
 ├─ README.md
-└─ repo-tree.txt
+├─ repo-tree.txt
+├─ site.webmanifest
+└─ tokutei.html

@@ -24,6 +24,8 @@ export async function onRequestPost(context) {
   const company = (body?.company || "").trim();
   const email = (body?.email || "").trim();
   const message = (body?.message || "").trim();
+  const sourceRaw = (body?.source || "").trim().toLowerCase();
+  const source = sourceRaw === "photowake" || sourceRaw === "kinyacho" ? sourceRaw : "unknown";
 
   if (!name || !email || !message) {
     return new Response(JSON.stringify({ ok: false, error: "missing_required_fields" }), {
@@ -48,8 +50,9 @@ export async function onRequestPost(context) {
     body: JSON.stringify({
       from: "support@asb-screening.com",
       to: "info@asb-screening.com",
-      subject: "New inquiry from LP",
+      subject: `New inquiry from LP (${source})`,
       html: `
+        <p><strong>LP Source:</strong> ${escapeHtml(source)}</p>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
         <p><strong>Company:</strong> ${escapeHtml(company || "N/A")}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>

@@ -27,11 +27,17 @@ app-lp/
 │     └─ screens/
 ├─ styles/
 │  ├─ common.css              # 共通スタイル
-│  └─ kinyacho.css            # 既存LPのアプリ別スタイル
+│  ├─ hub.css                 # ルート一覧ページ用スタイル
+│  ├─ kinyacho.css            # kinyacho LP用スタイル
+│  └─ photowake.css           # photowake LP用スタイル
+├─ kinyacho/
+│  └─ index.html              # /kinyacho
+├─ photowake/
+│  └─ index.html              # /photowake
 ├─ functions/
 │  └─ api/
 │     └─ contact.js           # Cloudflare Pages Functions
-├─ index.html                 # 現在のトップページ
+├─ index.html                 # LP一覧ハブ（/）
 ├─ privacy.html
 ├─ tokutei.html
 └─ README.md
@@ -49,7 +55,10 @@ app-lp/
 
 - Cloudflare Pages を利用
 - GitHub に push すると自動デプロイされる運用
-- ルートの `index.html` を公開トップとして扱う
+- 公開URL
+  - `/` : LP一覧ハブ
+  - `/kinyacho` : kinyacho LP
+  - `/photowake` : photowake LP
 
 ## 新しいLPを追加する手順
 
