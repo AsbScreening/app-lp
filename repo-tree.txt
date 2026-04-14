@@ -1,0 +1,41 @@
+﻿app-lp/
+├─ assets/
+│  ├─ common/
+│  │  ├─ badges/
+│  │  │  └─ app-store-badge-jp.svg
+│  │  ├─ favicon/
+│  │  │  ├─ apple-touch-icon.png
+│  │  │  ├─ favicon-96x96.png
+│  │  │  ├─ favicon.ico
+│  │  │  └─ favicon.svg
+│  │  ├─ manifest/
+│  │  │  ├─ site.webmanifest
+│  │  │  ├─ web-app-manifest-192x192.png
+│  │  │  └─ web-app-manifest-512x512.png
+│  │  └─ ogp/
+│  │     └─ ogp.svg
+│  ├─ kinyacho/
+│  │  ├─ images/
+│  │  │  └─ .gitkeep
+│  │  └─ screens/
+│  │     ├─ IMG_5656.PNG
+│  │     ├─ IMG_5657.PNG
+│  │     ├─ IMG_5658.PNG
+│  │     ├─ IMG_5659.PNG
+│  │     └─ IMG_5660.PNG
+│  └─ photowake/
+│     ├─ images/
+│     │  └─ .gitkeep
+│     └─ screens/
+│        └─ .gitkeep
+├─ functions/
+│  └─ api/
+│     └─ contact.js
+├─ styles/
+│  ├─ common.css
+│  └─ kinyacho.css
+├─ index.html
+├─ privacy.html
+├─ tokutei.html
+├─ README.md
+└─ repo-tree.txt

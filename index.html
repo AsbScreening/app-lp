@@ -10,18 +10,18 @@
   <meta property="og:title" content="キンヤチョ | 現場主導で始めるデジタル化の第一歩">
   <meta property="og:description" content="システム導入前に、現場で本当に必要な記録の形を試せるオフラインアプリ。">
   <meta property="og:url" content="https://lp.asb-screening.com">
-  <meta property="og:image" content="https://lp.asb-screening.com/ogp.svg">
+  <meta property="og:image" content="https://lp.asb-screening.com/assets/common/ogp/ogp.svg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#e7efeb">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles/common.css">
+  <link rel="stylesheet" href="./styles/kinyacho.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="hero-phone" aria-hidden="true">
-          <img src="./assets/screens/IMG_5658.PNG" alt="">
+          <img src="./assets/kinyacho/screens/IMG_5658.PNG" alt="">
         </div>
       </div>
     </section>
@@ -144,27 +144,27 @@
         </div>
         <div class="screen-grid">
           <article class="screen-card">
-            <img src="./assets/screens/IMG_5656.PNG" alt="テンプレ一覧画面">
+            <img src="./assets/kinyacho/screens/IMG_5656.PNG" alt="テンプレ一覧画面">
             <h3>テンプレ一覧</h3>
             <p>業務別テンプレートをひと目で管理し、運用変更にも柔軟に対応できます。</p>
           </article>
           <article class="screen-card">
-            <img src="./assets/screens/IMG_5657.PNG" alt="記録一覧画面">
+            <img src="./assets/kinyacho/screens/IMG_5657.PNG" alt="記録一覧画面">
             <h3>記録一覧</h3>
             <p>案件ごとの更新状況を一覧化し、現場の進行管理を支援します。</p>
           </article>
           <article class="screen-card">
-            <img src="./assets/screens/IMG_5658.PNG" alt="記録入力画面">
+            <img src="./assets/kinyacho/screens/IMG_5658.PNG" alt="記録入力画面">
             <h3>記録入力</h3>
             <p>タブで整理された入力画面により、項目が多い帳票でも迷わず入力できます。</p>
           </article>
           <article class="screen-card">
-            <img src="./assets/screens/IMG_5659.PNG" alt="テンプレート編集画面">
+            <img src="./assets/kinyacho/screens/IMG_5659.PNG" alt="テンプレート編集画面">
             <h3>テンプレ編集</h3>
             <p>フィールド追加や必須設定を現場側で調整し、必要な記録形式へ素早く近づけられます。</p>
           </article>
           <article class="screen-card">
-            <img src="./assets/screens/IMG_5660.PNG" alt="選択リスト管理画面">
+            <img src="./assets/kinyacho/screens/IMG_5660.PNG" alt="選択リスト管理画面">
             <h3>選択リスト管理</h3>
             <p>選択肢の管理を画面上で完結でき、分類項目が多い業務にも対応できます。</p>
           </article>
@@ -360,7 +360,7 @@
   <script>
     (() => {
       const APP_STORE_URL = "";
-      const APPLE_BADGE_SRC = "./assets/badges/app-store-badge-jp.svg";
+      const APPLE_BADGE_SRC = "./assets/common/badges/app-store-badge-jp.svg";
 
       const setupStoreBadge = ({ url, src, linkId, imageId, placeholderId }) => {
         const link = document.getElementById(linkId);

@@ -1,41 +1,85 @@
-<<<<<<< HEAD
-﻿# kinyacho-lp
+﻿# app-lp
 
-キンヤチョの静的ランディングページ（LP）です。Cloudflare Pages での単独公開を前提に、HTML/CSS中心で実装しています。
+## 概要
 
-## ローカル確認方法
+このリポジトリは、複数アプリのランディングページ（LP）を管理するための共通基盤です。  
+Cloudflare Pages で公開する、静的サイト（HTML / CSS / JavaScript）として運用します。
 
-1. このディレクトリで簡易サーバーを起動
+- 目的: アプリごとのLPを同じルールで管理する
+- 方針: シンプルな静的構成を維持し、追加・差し替えをしやすくする
+- 想定: 今後 `photowake` を含む複数アプリのLPを段階的に追加
+
+## ディレクトリ構成
+
+```text
+app-lp/
+├─ assets/
+│  ├─ common/                 # 共通資産（favicon / OGP / manifest / バッジ等）
+│  │  ├─ badges/
+│  │  ├─ favicon/
+│  │  ├─ manifest/
+│  │  └─ ogp/
+│  ├─ kinyacho/               # 既存LP資産（アプリ別）
+│  │  ├─ images/
+│  │  └─ screens/
+│  └─ photowake/              # 新規LP資産置き場（アプリ別）
+│     ├─ images/
+│     └─ screens/
+├─ styles/
+│  ├─ common.css              # 共通スタイル
+│  └─ kinyacho.css            # 既存LPのアプリ別スタイル
+├─ functions/
+│  └─ api/
+│     └─ contact.js           # Cloudflare Pages Functions
+├─ index.html                 # 現在のトップページ
+├─ privacy.html
+├─ tokutei.html
+└─ README.md
+```
+
+## 開発方針
+
+- 静的サイトで運用する（HTML / CSS / JavaScript）
+- ビルドツールは導入しない
+- 構成はシンプルに保つ
+- 資産は `assets/<app-name>/` でアプリごとに分離する
+- 共通資産は `assets/common/` に集約する
+
+## デプロイ
+
+- Cloudflare Pages を利用
+- GitHub に push すると自動デプロイされる運用
+- ルートの `index.html` を公開トップとして扱う
+
+## 新しいLPを追加する手順
+
+1. `assets/` 配下にアプリ用ディレクトリを作成する（例: `assets/photowake/`）
+2. `images/` と `screens/` に画像資産を配置する
+3. HTMLページを作成する（新規作成または既存ページをベースに複製）
+4. 必要なCSSを `styles/` に追加する（例: `styles/photowake.css`）
+5. `meta` / OGP / favicon / manifest の参照パスを確認する
+6. ローカル表示を確認して push する
+
+## 注意事項
+
+- favicon / manifest は `assets/common/` で共通管理する
+- OGPはページごとに適切な `og:title` / `og:description` / `og:image` を設定する
+- ファイル移動やディレクトリ変更時は、HTML内の参照パスを必ず更新する
+- 画像やバッジを差し替えるときは、リンク切れがないかを確認する
+
+## ローカル確認
+
+簡易サーバーで確認できます。
 
 ```powershell
-# Python がある場合
 python -m http.server 8080
 ```
 
-2. ブラウザで以下を開く
+- アクセス: `http://localhost:8080`
+- 確認対象: レイアウト崩れ、画像表示、リンク遷移、フォーム送信導線
 
-```text
-http://localhost:8080
-```
+## 今後の拡張メモ（任意）
 
-3. モバイル表示を優先確認
-- ブラウザの開発者ツールで iPhone/Android 幅（320px〜430px程度）を中心に確認
-- ヒーロー、価格、CTA、FAQ の視認性を重点
-
-## Cloudflare Pages 前提の補足
-
-- 本LPは `index.html` をエントリにした静的構成です（ビルド不要）。
-- GitHub に push すると Cloudflare Pages が自動デプロイされる前提で利用できます。
-- OGP画像は `ogp.svg` を参照しています。
-- 主要リンクは相対パス中心で実装し、Pages単体URL（`https://kinyacho-lp.pages.dev`）でそのまま表示可能です。
-
-## `https://asb-screening.com/kinyacho/lp` へ載せる際の注意点
-
-- 現状は Pages 単独公開向けの構成のため、将来 `/kinyacho/lp` 配下へ載せる際も相対パスのままで運用しやすい設計です。
-- ただし OGP の `og:url` と `og:image` は現時点で `https://kinyacho-lp.pages.dev` を向いているため、本番ドメイン移行時は以下の更新を推奨します。
-  - `og:url`
-  - `og:image`
-- `/kinyacho/lp` 配下で配信する際、リバースプロキシやルーティング設定側で `index.html` が正しく返ることを確認してください。
-=======
-# kinyacho-lp
->>>>>>> fe02b19fbd7bd05645dbc18f8bc4b857fafa7053
+- アプリごとのHTMLエントリ整理（例: `photowake.html`）
+- 共通head設定のテンプレート化
+- 運用ルール（命名規則・画像サイズ基準）の明文化

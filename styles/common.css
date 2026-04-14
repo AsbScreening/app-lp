@@ -1,0 +1,136 @@
+﻿:root {
+  --bg: #e7efeb;
+  --surface-strong: #ffffff;
+  --text: #2f3633;
+  --muted: #5e6662;
+  --line: #c2ccc7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Zen Kaku Gothic New", "M PLUS 1p", "Yu Gothic", sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  background:
+    radial-gradient(circle at 15% 10%, #f4fbf8 0%, transparent 45%),
+    radial-gradient(circle at 85% 0%, #dcebe4 0%, transparent 38%),
+    var(--bg);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, calc(100% - 28px));
+  margin-inline: auto;
+}
+
+.legal-main {
+  padding: 28px 0 64px;
+}
+
+.legal-shell {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.legal-header {
+  padding: 26px 20px;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  border: 1px solid #bfd0c8;
+  background: #f9fcfb;
+}
+
+.legal-header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2.1rem);
+}
+
+.legal-header p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.legal-body {
+  padding: 22px 20px;
+  border-radius: 16px;
+  border: 1px solid #bfd0c8;
+  background: #f9fcfb;
+}
+
+.legal-body section + section {
+  margin-top: 18px;
+}
+
+.legal-body h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.4rem);
+}
+
+.legal-body p,
+.legal-body li {
+  margin: 0;
+  color: var(--muted);
+}
+
+.legal-body ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.legal-body li + li,
+.legal-body p + p,
+.legal-body p + ul,
+.legal-body ul + p {
+  margin-top: 8px;
+}
+
+.legal-kv {
+  display: grid;
+  gap: 10px;
+}
+
+.legal-kv dt {
+  font-weight: 700;
+}
+
+.legal-kv dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 18px;
+  text-decoration: none;
+  border-bottom: 1px solid #94b6a4;
+}
+
+@media (min-width: 760px) {
+  .legal-main {
+    padding-top: 40px;
+  }
+
+  .legal-header,
+  .legal-body {
+    padding: 30px;
+  }
+
+  .legal-kv {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 16px;
+  }
+}
