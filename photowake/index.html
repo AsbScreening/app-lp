@@ -12,11 +12,13 @@
   <meta property="og:url" content="https://lp.asb-screening.com/photowake">
   <meta property="og:image" content="https://lp.asb-screening.com/assets/common/ogp/ogp.svg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#eef6ff">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/common.css">
   <link rel="stylesheet" href="/styles/photowake.css">
 </head>
 <body>
@@ -26,10 +28,13 @@
     <div class="container site-header__inner">
       <a class="brand" href="#hero">フォトワケ</a>
       <nav class="header-nav" aria-label="主要リンク">
-        <a href="#reality">現場のリアル</a>
-        <a href="#method">整理方法</a>
-        <a href="#security">導入しやすさ</a>
-        <a href="#cta">体験する</a>
+        <a href="#reality">Real</a>
+        <a href="#method">Method</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#store">Download</a>
+        <a href="#support">Support</a>
+        <a href="#faq">Q&amp;A</a>
       </nav>
     </div>
   </header>
@@ -51,8 +56,8 @@
           <p class="hero-note">確認作業を、流れ作業に変える。業務フローはそのまま、整理だけを軽くします。</p>
 
           <div class="cta-actions" role="group" aria-label="主要導線">
-            <a class="button-primary" href="#cta">まずは触ってみる</a>
-            <a class="button-secondary" href="mailto:support@asb-screening.com?subject=Photowake%E3%81%AE%E5%B0%8E%E5%85%A5%E7%9B%B8%E8%AB%87">導入を相談する</a>
+            <a class="button-primary" href="#store">まずは触ってみる</a>
+            <a class="button-secondary" href="#support">問い合わせる</a>
           </div>
         </div>
 
@@ -60,7 +65,7 @@
           <div class="phone-stage">
             <div class="phone-shell">
               <div class="phone-notch" aria-hidden="true"></div>
-              <video class="hero-video" autoplay loop muted playsinline preload="auto" poster="" aria-label="フォトワケの仕分けデモ動画">
+              <video class="hero-video" autoplay loop muted playsinline preload="auto" aria-label="フォトワケの仕分けデモ動画">
                 <source src="/assets/photowake/demo.mp4" type="video/mp4">
               </video>
             </div>
@@ -73,7 +78,6 @@
               <span>右スワイプ</span>
             </div>
           </div>
-          <p class="visual-caption">止めずに仕分ける感覚を、最初の数秒で理解できるデモです。</p>
         </div>
       </div>
     </section>
@@ -81,7 +85,7 @@
     <section class="section section-tone" id="reality" aria-labelledby="reality-title">
       <div class="container section-grid">
         <div class="section-heading">
-          <p class="section-label">01 現場のリアル</p>
+          <p class="section-label">Real</p>
           <h2 id="reality-title">写真は、順番通りには撮れない。</h2>
         </div>
         <div class="section-content cards-compact">
@@ -98,27 +102,10 @@
       </div>
     </section>
 
-    <section class="section" id="essence" aria-labelledby="essence-title">
+    <section class="section" id="method" aria-labelledby="method-title">
       <div class="container section-grid">
         <div class="section-heading">
-          <p class="section-label">02 問題の本質</p>
-          <h2 id="essence-title">非効率なのは、判断より操作です。</h2>
-        </div>
-        <div class="section-content split-panel">
-          <article class="statement-card">
-            <p class="statement">問題は「どれを残すか」ではなく、止まりながら操作し続けること。</p>
-          </article>
-          <article class="statement-card">
-            <p class="statement">作業が止まるたびに確認の流れが切れ、整理全体が重くなります。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="method" aria-labelledby="method-title">
-      <div class="container section-grid">
-        <div class="section-heading">
-          <p class="section-label">03 新しい整理方法</p>
+          <p class="section-label">Method</p>
           <h2 id="method-title">採用か、後回しか。まずはそれだけ。</h2>
         </div>
         <div class="section-content method-grid">
@@ -139,51 +126,48 @@
       </div>
     </section>
 
-    <section class="section" id="value" aria-labelledby="value-title">
+    <section class="section section-tone" id="features" aria-labelledby="features-title">
       <div class="container section-grid">
         <div class="section-heading">
-          <p class="section-label">04 体験価値</p>
-          <h2 id="value-title">止まらない。迷っても進める。気づいたら終わる。</h2>
+          <p class="section-label">Features</p>
+          <h2 id="features-title">必要な機能だけを、現場で使える形に。</h2>
         </div>
-        <div class="section-content value-grid">
-          <article class="value-card">
-            <strong>止まらない</strong>
-            <p>確認作業が連続した流れに変わります。</p>
+        <div class="section-content feature-grid">
+          <article class="feature-card">
+            <h3>スワイプ仕分け</h3>
+            <p>確認作業を止めずに進めるための、左右スワイプ中心の整理体験です。</p>
           </article>
-          <article class="value-card">
-            <strong>迷っても進める</strong>
-            <p>判断を保留できるので、その場で詰まりません。</p>
+          <article class="feature-card">
+            <h3>Zip出力</h3>
+            <p>仕分け後の写真をまとめて扱えるので、その後の受け渡しや保管も整理しやすくなります。</p>
           </article>
-          <article class="value-card">
-            <strong>気づいたら終わる</strong>
-            <p>山を崩すように、整理の残りが自然に減っていきます。</p>
+          <article class="feature-card">
+            <h3>セキュリティ重視</h3>
+            <p>写真整理を外部送信に頼らず進めたい現場向けの設計です。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-tone" id="security" aria-labelledby="security-title">
+    <section class="section" id="security" aria-labelledby="security-title">
       <div class="container section-grid">
         <div class="section-heading">
-          <p class="section-label">05 導入しやすさ</p>
+          <p class="section-label">Security</p>
           <h2 id="security-title">業務フローを変えずに、整理だけ改善できます。</h2>
         </div>
         <div class="section-content assurance-grid">
           <article class="assurance-card"><p>ローカル完結</p></article>
           <article class="assurance-card"><p>外部送信なし</p></article>
           <article class="assurance-card"><p>AI未使用</p></article>
-          <article class="assurance-card"><p>既存フォルダ運用OK</p></article>
-          <article class="assurance-card"><p>通常カメラ対応</p></article>
-          <article class="assurance-card"><p>デジカメ写真対応</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="usecase" aria-labelledby="usecase-title">
+    <section class="section section-tone" id="usecase" aria-labelledby="usecase-title">
       <div class="container section-grid">
         <div class="section-heading">
-          <p class="section-label">06 業種別ユースケース</p>
-          <h2 id="usecase-title">大量の写真を扱う現場に、そのまま乗せられます。</h2>
+          <p class="section-label">Use Case</p>
+          <h2 id="usecase-title">大量の写真を扱う現場に、そのまま使用できます。</h2>
         </div>
         <div class="section-content usecase-grid">
           <article class="usecase-card">
@@ -206,16 +190,147 @@
       </div>
     </section>
 
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="section-label">Pricing</p>
+          <h2 id="pricing-title">作業量に合わせて、使い方を選べます。</h2>
+        </div>
+        <div class="section-content pricing-stack">
+          <div class="pricing-flow" aria-label="利用の流れ">
+            <article class="flow-card">
+              <strong>1. まずは無料</strong>
+              <p>60枚まで取り込み可能。最初の感触をすぐ確かめられます。</p>
+            </article>
+            <article class="flow-card">
+              <strong>2. もう少し使う</strong>
+              <p>動画広告1回で +100枚。1日最大3回、合計360枚まで対応できます。</p>
+            </article>
+            <article class="flow-card">
+              <strong>3. 一気に片付ける</strong>
+              <p>買い切り型課金なら、購入当日と翌日23:59まで取り込み無制限です。</p>
+            </article>
+            <article class="flow-card">
+              <strong>4. 継続利用する</strong>
+              <p>サブスクは月額500円で取り込み無制限。日常的な整理に向いています。</p>
+            </article>
+          </div>
+
+          <div class="pricing-grid" role="list" aria-label="料金一覧">
+            <article class="price-card" role="listitem">
+              <h3>無料</h3>
+              <p>60枚まで取り込み可能</p>
+            </article>
+            <article class="price-card" role="listitem">
+              <h3>動画広告</h3>
+              <p>1回の視聴で +100枚、1日最大3回、合計360枚まで対応可能</p>
+            </article>
+            <article class="price-card price-card--accent" role="listitem">
+              <h3>買い切り型課金</h3>
+              <p>購入当日 + 翌日23:59まで取り込み無制限</p>
+            </article>
+            <article class="price-card price-card--accent" role="listitem">
+              <h3>サブスク</h3>
+              <p>月額500円で取り込み無制限</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tone" id="store" aria-labelledby="store-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="section-label">Download</p>
+          <h2 id="store-title">アプリ入手案内</h2>
+        </div>
+        <div class="section-content store-grid">
+          <article class="store-card">
+            <h3>iPhone版</h3>
+            <p>公開後、App Storeからダウンロードできます。URL設定後にこのカードが有効化されます。</p>
+            <a id="app-store-link" class="store-badge-link" aria-disabled="true">
+              <img id="app-store-badge" alt="App Storeからダウンロード" hidden>
+              <span id="app-store-placeholder" class="store-badge-placeholder">App Store公式バッジを表示予定</span>
+            </a>
+          </article>
+
+          <article class="store-card">
+            <h3>Android版</h3>
+            <p>現在テスト利用を案内中です。導入相談や試用のご希望はお問い合わせください。</p>
+            <a class="button-secondary store-contact-link" href="#support">Android版について問い合わせる</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="support" aria-labelledby="support-title">
+      <div class="container support-shell">
+        <div class="section-head">
+          <p class="section-label">Support</p>
+          <h2 id="support-title">導入・運用に関するお問い合わせ</h2>
+          <p class="support-lead">現場での使い方、導入相談、Android版の案内などはこちらからご連絡ください。</p>
+        </div>
+
+        <form id="contact-form" class="support-form" novalidate>
+          <label class="form-field">
+            <span>名前 <em>必須</em></span>
+            <input type="text" name="name" autocomplete="name" required placeholder="お名前">
+          </label>
+
+          <label class="form-field">
+            <span>会社名 <small>任意</small></span>
+            <input type="text" name="company" autocomplete="organization" placeholder="会社名（任意）">
+          </label>
+
+          <label class="form-field">
+            <span>メールアドレス <em>必須</em></span>
+            <input type="email" name="email" autocomplete="email" required placeholder="メールアドレス">
+          </label>
+
+          <label class="form-field form-field--full">
+            <span>お問い合わせ内容 <em>必須</em></span>
+            <textarea name="message" required placeholder="お問い合わせ内容"></textarea>
+          </label>
+
+          <button id="contact-submit" type="submit" class="button-primary support-submit">送信する</button>
+          <p id="contact-status" class="support-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-tone" id="faq" aria-labelledby="faq-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="section-label">Q&amp;A</p>
+          <h2 id="faq-title">よくある質問</h2>
+        </div>
+        <div class="section-content faq-list">
+          <details class="faq-item">
+            <summary>後回しにした写真は削除されますか？</summary>
+            <p>削除ではありません。あとで確認するために分けるだけなので、流れを止めずに整理を続けられます。</p>
+          </details>
+          <details class="faq-item">
+            <summary>写真は外部に送信されますか？</summary>
+            <p>フォトワケはローカル完結を前提にしており、外部送信なしで使える構成です。</p>
+          </details>
+          <details class="faq-item">
+            <summary>どんな写真整理に向いていますか？</summary>
+            <p>施工写真、証拠写真、サンプル画像、記録写真など、大量で順番通りに撮れない写真の確認に向いています。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-cta" id="cta" aria-labelledby="cta-title">
       <div class="container cta-panel">
         <div>
-          <p class="section-label">07 CTA</p>
+          <p class="section-label">CTA</p>
           <h2 id="cta-title">まずは一度、触ってみてください。</h2>
           <p class="cta-copy">止まらない整理を体験してください。<br>「え、これだけでいいの？」が、最初の反応です。</p>
         </div>
         <div class="cta-actions" role="group" aria-label="最終導線">
-          <a class="button-primary" href="mailto:support@asb-screening.com?subject=Photowake%E3%81%AE%E3%83%87%E3%83%A2%E4%BE%9D%E9%A0%BC">デモを依頼する</a>
-          <a class="button-secondary button-secondary--dark" href="mailto:support@asb-screening.com?subject=Photowake%E3%81%AE%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">問い合わせる</a>
+          <a class="button-primary" href="#store">ダウンロード案内を見る</a>
+          <a class="button-secondary button-secondary--light" href="#support">問い合わせる</a>
         </div>
       </div>
     </section>
@@ -235,5 +350,82 @@
       <small>&copy; フォトワケ</small>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const APP_STORE_URL = "";
+      const APPLE_BADGE_SRC = "/assets/common/badges/app-store-badge-jp.svg";
+
+      const link = document.getElementById("app-store-link");
+      const image = document.getElementById("app-store-badge");
+      const placeholder = document.getElementById("app-store-placeholder");
+
+      if (!link || !image || !placeholder) return;
+
+      if (APP_STORE_URL) {
+        link.href = APP_STORE_URL;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.removeAttribute("aria-disabled");
+        image.src = APPLE_BADGE_SRC;
+        image.hidden = false;
+        placeholder.hidden = true;
+      } else {
+        link.removeAttribute("href");
+        link.setAttribute("aria-disabled", "true");
+        link.classList.add("is-disabled");
+        image.hidden = true;
+        placeholder.hidden = false;
+      }
+    })();
+  </script>
+  <script>
+    (() => {
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("contact-status");
+      const submit = document.getElementById("contact-submit");
+
+      if (!form || !status || !submit) return;
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (!form.reportValidity()) return;
+
+        submit.disabled = true;
+        status.textContent = "送信中です。しばらくお待ちください。";
+        status.dataset.state = "loading";
+
+        const payload = {
+          source: "フォトワケ",
+          name: form.name.value.trim(),
+          company: form.company.value.trim(),
+          email: form.email.value.trim(),
+          message: form.message.value.trim()
+        };
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+
+          if (!response.ok) {
+            throw new Error("send_failed");
+          }
+
+          form.reset();
+          status.textContent = "お問い合わせを送信しました。担当者よりご連絡します。";
+          status.dataset.state = "success";
+        } catch {
+          status.textContent = "送信に失敗しました。時間をおいて再度お試しください。";
+          status.dataset.state = "error";
+        } finally {
+          submit.disabled = false;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
