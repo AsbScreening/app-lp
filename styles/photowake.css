@@ -150,8 +150,8 @@ video {
 }
 
 .hero h1 {
-  font-size: clamp(2.1rem, 5.8vw, 4.4rem);
-  max-width: 11.5ch;
+  font-size: clamp(1.9rem, 4.9vw, 3.85rem);
+  max-width: 12.4ch;
 }
 
 .section-heading h2,
@@ -251,7 +251,7 @@ video {
 
 .phone-stage {
   position: relative;
-  width: min(100%, 420px);
+  width: min(100%, 360px);
   margin-inline: auto;
 }
 
@@ -734,8 +734,8 @@ body.photowake-legal {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(520px, 1.18fr) minmax(360px, 0.82fr);
-    gap: 42px;
+    grid-template-columns: minmax(560px, 1.22fr) minmax(320px, 0.78fr);
+    gap: 36px;
   }
 
   .section-grid {
