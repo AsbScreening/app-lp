@@ -32,7 +32,13 @@
 │  └─ api/
 │     └─ contact.js
 ├─ kinyacho/
-│  └─ index.html
+│  ├─ index.html
+│  ├─ privacy/
+│  │  └─ index.html
+│  ├─ terms/
+│  │  └─ index.html
+│  └─ tokutei/
+│     └─ index.html
 ├─ photowake/
 │  └─ index.html
 ├─ styles/

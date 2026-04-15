@@ -31,15 +31,21 @@ app-lp/
 │  ├─ kinyacho.css            # kinyacho LP用スタイル
 │  └─ photowake.css           # photowake LP用スタイル
 ├─ kinyacho/
-│  └─ index.html              # /kinyacho
+│  ├─ index.html             # /kinyacho
+│  ├─ privacy/
+│  │  └─ index.html          # /kinyacho/privacy
+│  ├─ tokutei/
+│  │  └─ index.html          # /kinyacho/tokutei
+│  └─ terms/
+│     └─ index.html          # /kinyacho/terms
 ├─ photowake/
-│  └─ index.html              # /photowake
+│  └─ index.html             # /photowake
 ├─ functions/
 │  └─ api/
-│     └─ contact.js           # Cloudflare Pages Functions
-├─ index.html                 # LP一覧ハブ（/）
-├─ privacy.html
-├─ tokutei.html
+│     └─ contact.js          # Cloudflare Pages Functions
+├─ index.html                # LP一覧ハブ（/）
+├─ privacy.html              # /privacy.html -> /kinyacho/privacy
+├─ tokutei.html              # /tokutei.html -> /kinyacho/tokutei
 └─ README.md
 ```
 
@@ -59,6 +65,9 @@ app-lp/
   - `/` : LP一覧ハブ
   - `/kinyacho` : kinyacho LP
   - `/photowake` : photowake LP
+  - `/kinyacho/privacy` : キンヤチョ プライバシーポリシー
+  - `/kinyacho/tokutei` : キンヤチョ 特定商取引法に基づく表記
+  - `/kinyacho/terms` : キンヤチョ 利用規約
 
 ## 新しいLPを追加する手順
 
