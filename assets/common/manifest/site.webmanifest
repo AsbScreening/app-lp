@@ -1,21 +1,19 @@
-﻿{
+{
   "name": "キンヤチョ",
   "short_name": "キンヤチョ",
   "icons": [
     {
       "src": "/assets/common/manifest/web-app-manifest-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
       "src": "/assets/common/manifest/web-app-manifest-512x512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
   ],
-  "theme_color": "#e7efeb",
-  "background_color": "#e7efeb",
+  "theme_color": "#ffad56",
+  "background_color": "#ffad56",
   "display": "standalone"
 }
