@@ -695,10 +695,28 @@ body.photowake-legal {
     display: flex;
   }
 
-  .hero-grid,
+  .hero-grid {
+    grid-template-columns: minmax(420px, 1.22fr) minmax(260px, 0.78fr);
+    align-items: center;
+    gap: 24px;
+  }
+
   .section-grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    justify-items: end;
+  }
+
+  .phone-stage {
+    width: min(100%, 320px);
+    margin-inline: 0;
   }
 
   .method-grid,
@@ -734,8 +752,12 @@ body.photowake-legal {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(560px, 1.22fr) minmax(320px, 0.78fr);
+    grid-template-columns: minmax(600px, 1.28fr) minmax(280px, 0.72fr);
     gap: 36px;
+  }
+
+  .phone-stage {
+    width: min(100%, 340px);
   }
 
   .section-grid {
