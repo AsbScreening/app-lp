@@ -190,7 +190,14 @@ video {
   margin-top: 18px;
   font-size: 1.05rem;
   color: #31577f;
-  max-width: 32ch;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.hero-lead-line,
+.hero-note-line {
+  display: block;
+  width: max-content;
 }
 
 .hero-points {
@@ -212,7 +219,8 @@ video {
 
 .hero-note {
   margin-top: 18px;
-  max-width: 34ch;
+  max-width: none;
+  white-space: nowrap;
 }
 
 .cta-actions {
@@ -708,8 +716,18 @@ body.photowake-legal {
   }
 
   .section-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+
+  .section-heading {
+    max-width: 100%;
+  }
+
+  .section-heading h2 {
+    max-width: none;
+    white-space: nowrap;
   }
 
   .hero-copy {
@@ -727,7 +745,6 @@ body.photowake-legal {
 
   .method-grid,
   .feature-grid,
-  .pricing-grid,
   .store-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -739,6 +756,10 @@ body.photowake-legal {
 
   .assurance-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .support-form {
@@ -766,16 +787,14 @@ body.photowake-legal {
     width: min(100%, 300px);
   }
 
-  .section-grid {
-    grid-template-columns: minmax(340px, 0.92fr) minmax(0, 1.08fr);
-    gap: 32px;
-    align-items: start;
-  }
-
   .cards-compact,
   .feature-grid,
-  .usecase-grid,
-  .pricing-grid {
+  .usecase-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .method-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
