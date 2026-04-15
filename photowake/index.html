@@ -28,12 +28,12 @@
     <div class="container site-header__inner">
       <a class="brand" href="#hero">フォトワケ</a>
       <nav class="header-nav" aria-label="主要リンク">
-        <a href="#reality">Real</a>
-        <a href="#method">Method</a>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#store">Download</a>
-        <a href="#support">Support</a>
+        <a href="#reality">現場のリアル</a>
+        <a href="#method">整理方法</a>
+        <a href="#features">機能</a>
+        <a href="#pricing">料金</a>
+        <a href="#store">入手案内</a>
+        <a href="#support">問い合わせ</a>
         <a href="#faq">Q&amp;A</a>
       </nav>
     </div>
@@ -337,15 +337,15 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <p class="footer-brand">フォトワケ</p>
+    <div class="container footer__inner">
+      <p class="footer__brand">フォトワケ</p>
       <nav aria-label="フッターリンク">
-        <div class="footer-links">
-          <a href="/photowake/tokutei" rel="noopener noreferrer">特定商取引法表記</a>
-          <a href="/photowake/privacy" rel="noopener noreferrer">プライバシーポリシー</a>
-          <a href="/photowake/terms" rel="noopener noreferrer">利用規約</a>
-          <a href="/">LP一覧へ戻る</a>
-        </div>
+        <ul class="footer__links">
+          <li><a href="/photowake/tokutei" rel="noopener noreferrer">特定商取引法表記</a></li>
+          <li><a href="/photowake/privacy" rel="noopener noreferrer">プライバシーポリシー</a></li>
+          <li><a href="/photowake/terms" rel="noopener noreferrer">利用規約</a></li>
+          <li><a href="/">LP一覧へ戻る</a></li>
+        </ul>
       </nav>
       <small>&copy; フォトワケ</small>
     </div>
@@ -367,13 +367,21 @@
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         link.removeAttribute("aria-disabled");
-        image.src = APPLE_BADGE_SRC;
-        image.hidden = false;
-        placeholder.hidden = true;
       } else {
         link.removeAttribute("href");
         link.setAttribute("aria-disabled", "true");
         link.classList.add("is-disabled");
+      }
+
+      if (APPLE_BADGE_SRC) {
+        image.src = APPLE_BADGE_SRC;
+        image.hidden = false;
+        placeholder.hidden = true;
+        image.addEventListener("error", () => {
+          image.hidden = true;
+          placeholder.hidden = false;
+        });
+      } else {
         image.hidden = true;
         placeholder.hidden = false;
       }

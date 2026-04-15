@@ -449,15 +449,22 @@ video {
   width: fit-content;
   margin-top: 18px;
   text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  max-width: 100%;
 }
 
 .store-badge-link.is-disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
   pointer-events: none;
 }
 
 .store-badge-link img {
   height: 42px;
   width: auto;
+  display: block;
 }
 
 .store-badge-placeholder {
@@ -600,23 +607,26 @@ video {
   background: rgba(247, 251, 255, 0.94);
 }
 
-.footer-inner {
+.footer__inner {
   display: grid;
   gap: 12px;
 }
 
-.footer-brand {
+.footer__brand {
   margin: 0;
   font-weight: 800;
 }
 
-.footer-links {
+.footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-.footer a {
+.footer__links a {
   text-decoration: none;
   border-bottom: 1px solid rgba(45, 111, 188, 0.22);
 }
@@ -703,6 +713,15 @@ body.photowake-legal {
   .cta-panel {
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
+  }
+
+  .footer__inner {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .footer__links {
+    justify-content: center;
   }
 }
 
