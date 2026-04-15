@@ -1,14 +1,14 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>フォトワケ | スワイプするだけで、片手で片付く整理作業。</title>
-  <meta name="description" content="フォトワケは、スワイプ操作で写真を高速整理できるローカル完結アプリです。隙間時間に片手で連続仕分けできます。">
+  <title>フォトワケ | 順番通りに撮らなくていい。あとで整えばいい。</title>
+  <meta name="description" content="フォトワケは、順番に縛られない写真整理のためのスワイプアプリ。左で採用、右で後回し。迷っても止まらない整理をローカル完結で実現します。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="フォトワケ">
-  <meta property="og:title" content="フォトワケ | スワイプするだけで、片手で片付く整理作業。">
-  <meta property="og:description" content="迷わずどんどん整理。すべて端末内で完結するスワイプ整理アプリ。">
+  <meta property="og:title" content="フォトワケ | 順番通りに撮らなくていい。あとで整えばいい。">
+  <meta property="og:description" content="写真整理に、スワイプという選択肢。現場の撮り方に整理を合わせるローカル完結アプリ。">
   <meta property="og:url" content="https://lp.asb-screening.com/photowake">
   <meta property="og:image" content="https://lp.asb-screening.com/assets/common/ogp/ogp.svg">
   <meta name="twitter:card" content="summary_large_image">
@@ -24,228 +24,199 @@
 
   <header class="site-header">
     <div class="container site-header__inner">
-      <p class="brand">フォトワケ</p>
+      <a class="brand" href="#hero">フォトワケ</a>
       <nav class="header-nav" aria-label="主要リンク">
-        <a href="#problem">悩み</a>
-        <a href="#solution">解決</a>
-        <a href="#features">機能</a>
-        <a href="#pricing">プラン</a>
-        <a href="#support">問い合わせ</a>
-        <a href="#faq">FAQ</a>
+        <a href="#reality">現場のリアル</a>
+        <a href="#method">整理方法</a>
+        <a href="#security">導入しやすさ</a>
+        <a href="#cta">体験する</a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
-        <div>
-          <p class="kicker">SWIPE PHOTO ORGANIZER</p>
-          <h1 id="hero-title">スワイプするだけで、<br>片手で片付く整理作業。</h1>
-          <p class="hero-sub">隙間時間に、迷わずどんどん整理。<br>すべて端末内で完結します。</p>
+        <div class="hero-copy">
+          <p class="eyebrow">FIELD PHOTO SORTING</p>
+          <h1 id="hero-title">順番通りに撮らなくていい。<br>あとで整えばいい。</h1>
+          <p class="hero-lead">写真整理に、スワイプという選択肢。<br>現場の撮り方に整理を合わせる フォトワケ。</p>
 
-          <div class="cta-actions" role="group" aria-label="アプリ導線">
-            <a id="hero-appstore-link" class="appstore-badge" aria-disabled="true">
-              <img id="hero-appstore-badge" src="/assets/common/badges/app-store-badge-jp.svg" alt="App Storeからダウンロード">
-            </a>
-            <a class="button-secondary" href="#android-tester">Androidテスター募集</a>
+          <ul class="hero-points" aria-label="操作の要点">
+            <li>左にスワイプ → 採用</li>
+            <li>右にスワイプ → 後回し</li>
+            <li>迷っても止まらない整理</li>
+          </ul>
+
+          <p class="hero-note">確認作業を、流れ作業に変える。業務フローはそのまま、整理だけを軽くします。</p>
+
+          <div class="cta-actions" role="group" aria-label="主要導線">
+            <a class="button-primary" href="#cta">まずは触ってみる</a>
+            <a class="button-secondary" href="mailto:support@asb-screening.com?subject=Photowake%E3%81%AE%E5%B0%8E%E5%85%A5%E7%9B%B8%E8%AB%87">導入を相談する</a>
           </div>
-          <p class="cta-note">App Storeをメイン導線、Android版はテスター向け導線として用意しています。</p>
         </div>
 
-        <div class="swipe-stack" aria-hidden="true">
-          <article class="swipe-card">
-            <p class="swipe-state bad">左スワイプ: 保留/削除候補</p>
-            <strong>会議資料のスクリーンショット</strong>
+        <div class="hero-visual">
+          <div class="phone-stage">
+            <div class="phone-shell">
+              <div class="phone-notch" aria-hidden="true"></div>
+              <video class="hero-video" autoplay loop muted playsinline preload="auto" poster="" aria-label="フォトワケの仕分けデモ動画">
+                <source src="/assets/photowake/demo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="gesture-card gesture-card--left" aria-hidden="true">
+              <strong>採用</strong>
+              <span>左スワイプ</span>
+            </div>
+            <div class="gesture-card gesture-card--right" aria-hidden="true">
+              <strong>後回し</strong>
+              <span>右スワイプ</span>
+            </div>
+          </div>
+          <p class="visual-caption">止めずに仕分ける感覚を、最初の数秒で理解できるデモです。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tone" id="reality" aria-labelledby="reality-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="section-label">01 現場のリアル</p>
+          <h2 id="reality-title">写真は、順番通りには撮れない。</h2>
+        </div>
+        <div class="section-content cards-compact">
+          <article class="info-card">
+            <p>施工中、検査中、採取中。撮る順番は現場の流れで決まります。</p>
           </article>
-          <article class="swipe-card">
-            <p class="swipe-state good">右スワイプ: 保存フォルダへ</p>
-            <strong>現場記録写真</strong>
+          <article class="info-card">
+            <p>抜け、重複、前後ズレが起きても、それが普通です。</p>
           </article>
-          <article class="swipe-card">
-            <p class="swipe-state good">連続スワイプで高速仕分け</p>
-            <strong>気づけば、山がなくなっている。</strong>
+          <article class="info-card">
+            <p>それでも整理は順番前提。後工程で確認が詰まります。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-sub" id="problem" aria-labelledby="problem-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Problem</p>
-          <h2 id="problem-title">整理したいのに、手が止まる悩み</h2>
+    <section class="section" id="essence" aria-labelledby="essence-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="section-label">02 問題の本質</p>
+          <h2 id="essence-title">非効率なのは、判断より操作です。</h2>
         </div>
-        <div class="grid cols-2">
-          <article class="card"><p>写真の整理に時間がかかる</p></article>
-          <article class="card"><p>PCでの整理が面倒</p></article>
-          <article class="card"><p>フォルダ分けが後回しになる</p></article>
-          <article class="card"><p>AIに任せるのは不安</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="solution" aria-labelledby="solution-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Solution</p>
-          <h2 id="solution-title">自分で判断するから、速くて安心。</h2>
-        </div>
-        <div class="grid cols-3">
-          <article class="card">
-            <h3>直感スワイプ</h3>
-            <p class="text-sub">左右スワイプで瞬時に仕分け。止まらず判断できます。</p>
+        <div class="section-content split-panel">
+          <article class="statement-card">
+            <p class="statement">問題は「どれを残すか」ではなく、止まりながら操作し続けること。</p>
           </article>
-          <article class="card">
-            <h3>端末内で完結</h3>
-            <p class="text-sub">クラウドに依存せず、すべてローカル処理で完了します。</p>
-          </article>
-          <article class="card">
-            <h3>外部送信なし</h3>
-            <p class="text-sub">AI処理や外部アップロードを前提にしない設計です。</p>
+          <article class="statement-card">
+            <p class="statement">作業が止まるたびに確認の流れが切れ、整理全体が重くなります。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-sub" id="features" aria-labelledby="features-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Features</p>
-          <h2 id="features-title">必要な機能を、シンプルに</h2>
+    <section class="section section-dark" id="method" aria-labelledby="method-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="section-label">03 新しい整理方法</p>
+          <h2 id="method-title">採用か、後回しか。まずはそれだけ。</h2>
         </div>
-        <div class="grid cols-4">
-          <article class="card">
-            <h3>スワイプ仕分け</h3>
-            <p class="text-sub">片手で連続的に判定して整理を進めます。</p>
+        <div class="section-content method-grid">
+          <article class="swipe-rule swipe-rule--accept">
+            <span class="swipe-chip">左スワイプ</span>
+            <h3>採用</h3>
+            <p>必要な写真をテンポよく残す。</p>
           </article>
-          <article class="card">
-            <h3>フォルダ整理</h3>
-            <p class="text-sub">判定結果に応じて整理先を分けて管理できます。</p>
+          <article class="swipe-rule swipe-rule--later">
+            <span class="swipe-chip">右スワイプ</span>
+            <h3>後回し</h3>
+            <p>削除ではなく、あとで確認するために送る。</p>
           </article>
-          <article class="card">
-            <h3>ZIP出力</h3>
-            <p class="text-sub">仕分けたデータをまとめて書き出せます。</p>
-          </article>
-          <article class="card">
-            <h3>ローカル完結</h3>
-            <p class="text-sub">通信環境に依存せず、端末内で処理します。</p>
+          <article class="metaphor-card">
+            <p>あとで考えるカードを山札の下に戻す感覚。判断を先送りしても、流れは止まりません。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="experience" aria-labelledby="experience-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Experience</p>
-          <h2 id="experience-title">止まらない整理体験</h2>
+    <section class="section" id="value" aria-labelledby="value-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="section-label">04 体験価値</p>
+          <h2 id="value-title">止まらない。迷っても進める。気づいたら終わる。</h2>
         </div>
-        <article class="card">
-          <p class="text-sub">山札を崩すように、連続スワイプでどんどん片付きます。迷いを最小化し、作業を中断しないフローで整理速度を高めます。</p>
-          <p><strong>気づけば、山がなくなっている。</strong></p>
-        </article>
+        <div class="section-content value-grid">
+          <article class="value-card">
+            <strong>止まらない</strong>
+            <p>確認作業が連続した流れに変わります。</p>
+          </article>
+          <article class="value-card">
+            <strong>迷っても進める</strong>
+            <p>判断を保留できるので、その場で詰まりません。</p>
+          </article>
+          <article class="value-card">
+            <strong>気づいたら終わる</strong>
+            <p>山を崩すように、整理の残りが自然に減っていきます。</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section-sub" id="pricing" aria-labelledby="pricing-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Pricing</p>
-          <h2 id="pricing-title">用途に合わせて選べる利用プラン</h2>
+    <section class="section section-tone" id="security" aria-labelledby="security-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="section-label">05 導入しやすさ</p>
+          <h2 id="security-title">業務フローを変えずに、整理だけ改善できます。</h2>
         </div>
-
-        <div class="grid cols-2">
-          <article class="card">
-            <h3>無料</h3>
-            <p class="text-sub">60枚まで取り込み可能</p>
-          </article>
-          <article class="card">
-            <h3>動画広告</h3>
-            <p class="text-sub">1回の視聴で +100枚、1日最大3回、合計360枚まで対応可能</p>
-          </article>
-          <article class="card plan-main">
-            <h3>買い切り型課金</h3>
-            <p class="text-sub">購入当日 + 翌日23:59まで取り込み無制限</p>
-          </article>
-          <article class="card plan-main">
-            <h3>サブスク</h3>
-            <p class="text-sub">月額500円で取り込み無制限</p>
-          </article>
+        <div class="section-content assurance-grid">
+          <article class="assurance-card"><p>ローカル完結</p></article>
+          <article class="assurance-card"><p>外部送信なし</p></article>
+          <article class="assurance-card"><p>AI未使用</p></article>
+          <article class="assurance-card"><p>既存フォルダ運用OK</p></article>
+          <article class="assurance-card"><p>通常カメラ対応</p></article>
+          <article class="assurance-card"><p>デジカメ写真対応</p></article>
         </div>
-
-        <p class="text-sub"><strong>作業量に合わせて、無駄なく使えます。</strong></p>
       </div>
     </section>
 
-    <section class="section" id="android-tester" aria-labelledby="cta-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Get Started</p>
-          <h2 id="cta-title">まずは今の写真整理から、軽くする</h2>
+    <section class="section" id="usecase" aria-labelledby="usecase-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="section-label">06 業種別ユースケース</p>
+          <h2 id="usecase-title">大量の写真を扱う現場に、そのまま乗せられます。</h2>
+        </div>
+        <div class="section-content usecase-grid">
+          <article class="usecase-card">
+            <span>建設</span>
+            <p>施工写真の採用確認に。</p>
+          </article>
+          <article class="usecase-card">
+            <span>検査</span>
+            <p>証拠写真の仕分けに。</p>
+          </article>
+          <article class="usecase-card">
+            <span>分析</span>
+            <p>サンプル画像の整理に。</p>
+          </article>
+          <article class="usecase-card">
+            <span>研究</span>
+            <p>記録写真の確認に。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta" id="cta" aria-labelledby="cta-title">
+      <div class="container cta-panel">
+        <div>
+          <p class="section-label">07 CTA</p>
+          <h2 id="cta-title">まずは一度、触ってみてください。</h2>
+          <p class="cta-copy">止まらない整理を体験してください。<br>「え、これだけでいいの？」が、最初の反応です。</p>
         </div>
         <div class="cta-actions" role="group" aria-label="最終導線">
-          <a id="footer-appstore-link" class="button-primary" aria-disabled="true">App Storeで始める</a>
-          <a class="button-secondary" href="mailto:support@asb-screening.com?subject=%E3%83%95%E3%82%A9%E3%83%88%E3%83%AF%E3%82%B1%20Android%E3%83%86%E3%82%B9%E3%82%BF%E3%83%BC%E5%B8%8C%E6%9C%9B">Androidテスター応募</a>
+          <a class="button-primary" href="mailto:support@asb-screening.com?subject=Photowake%E3%81%AE%E3%83%87%E3%83%A2%E4%BE%9D%E9%A0%BC">デモを依頼する</a>
+          <a class="button-secondary button-secondary--dark" href="mailto:support@asb-screening.com?subject=Photowake%E3%81%AE%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">問い合わせる</a>
         </div>
-      </div>
-    </section>
-
-    <section class="section-sub" id="faq" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">FAQ</p>
-          <h2 id="faq-title">よくある質問</h2>
-        </div>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>取り込み対象は選べますか？</summary>
-            <p>日付範囲指定で取り込み可能です。必要な期間だけ対象にして整理できます。</p>
-          </details>
-          <details class="faq-item">
-            <summary>操作ミスが心配です</summary>
-            <p>誤操作時もスワイプで戻せる設計です。連続操作でも戻しながら調整できます。</p>
-          </details>
-          <details class="faq-item">
-            <summary>データは外部に送信されますか？</summary>
-            <p>すべて端末内処理で完結し、外部送信しない設計です。</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="support" aria-labelledby="support-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Support</p>
-          <h2 id="support-title">導入・運用に関するお問い合わせ</h2>
-        </div>
-        <p class="text-sub">使い方の相談や、Androidテスト参加についてもこちらからご連絡ください。</p>
-
-        <form id="contact-form" class="support-form" novalidate>
-          <label class="form-field">
-            <span>名前 <em>必須</em></span>
-            <input type="text" name="name" autocomplete="name" required placeholder="お名前">
-          </label>
-
-          <label class="form-field">
-            <span>会社名 <small>任意</small></span>
-            <input type="text" name="company" autocomplete="organization" placeholder="会社名（任意）">
-          </label>
-
-          <label class="form-field">
-            <span>メールアドレス <em>必須</em></span>
-            <input type="email" name="email" autocomplete="email" required placeholder="メールアドレス">
-          </label>
-
-          <label class="form-field">
-            <span>お問い合わせ内容 <em>必須</em></span>
-            <textarea name="message" required placeholder="お問い合わせ内容"></textarea>
-          </label>
-
-          <button id="contact-submit" type="submit" class="button-primary support-submit">送信する</button>
-          <p id="contact-status" class="support-status" role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
@@ -264,87 +235,5 @@
       <small>&copy; フォトワケ</small>
     </div>
   </footer>
-
-  <script>
-    (() => {
-      const APP_STORE_URL = "";
-      const heroLink = document.getElementById("hero-appstore-link");
-      const footerLink = document.getElementById("footer-appstore-link");
-
-      if (APP_STORE_URL) {
-        if (heroLink) {
-          heroLink.href = APP_STORE_URL;
-          heroLink.target = "_blank";
-          heroLink.rel = "noopener noreferrer";
-          heroLink.removeAttribute("aria-disabled");
-        }
-        if (footerLink) {
-          footerLink.href = APP_STORE_URL;
-          footerLink.target = "_blank";
-          footerLink.rel = "noopener noreferrer";
-          footerLink.removeAttribute("aria-disabled");
-        }
-      } else {
-        if (heroLink) {
-          heroLink.removeAttribute("href");
-          heroLink.style.opacity = "0.72";
-          heroLink.style.pointerEvents = "none";
-        }
-        if (footerLink) {
-          footerLink.removeAttribute("href");
-          footerLink.style.opacity = "0.72";
-          footerLink.style.pointerEvents = "none";
-        }
-      }
-    })();
-  </script>
-  <script>
-    (() => {
-      const form = document.getElementById("contact-form");
-      const status = document.getElementById("contact-status");
-      const submit = document.getElementById("contact-submit");
-
-      if (!form || !status || !submit) return;
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        if (!form.reportValidity()) return;
-
-        submit.disabled = true;
-        status.textContent = "送信中です。しばらくお待ちください。";
-        status.dataset.state = "loading";
-
-        const payload = {
-          source: "フォトワケ",
-          name: form.name.value.trim(),
-          company: form.company.value.trim(),
-          email: form.email.value.trim(),
-          message: form.message.value.trim()
-        };
-
-        try {
-          const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload)
-          });
-
-          if (!response.ok) {
-            throw new Error("send_failed");
-          }
-
-          form.reset();
-          status.textContent = "お問い合わせを送信しました。担当者よりご連絡します。";
-          status.dataset.state = "success";
-        } catch {
-          status.textContent = "送信に失敗しました。時間をおいて再度お試しください。";
-          status.dataset.state = "error";
-        } finally {
-          submit.disabled = false;
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
