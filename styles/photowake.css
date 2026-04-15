@@ -150,8 +150,8 @@ video {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 7vw, 5.2rem);
-  max-width: 10.5ch;
+  font-size: clamp(2.1rem, 5.8vw, 4.4rem);
+  max-width: 11.5ch;
 }
 
 .section-heading h2,
