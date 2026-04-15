@@ -452,12 +452,9 @@ video {
 .feature-card p,
 .price-card p,
 .store-card p,
-.faq-item p {
-  max-width: 28ch;
-}
-
+.faq-item p,
 .usecase-card p {
-  max-width: 18ch;
+  max-width: none;
 }
 
 .store-badge-link {
