@@ -502,6 +502,11 @@ video {
   margin-bottom: 18px;
 }
 
+.support-shell .section-head h2 {
+  max-width: none;
+  white-space: nowrap;
+}
+
 .support-shell {
   padding: 28px;
 }
