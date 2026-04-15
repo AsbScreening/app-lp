@@ -151,7 +151,13 @@ video {
 
 .hero h1 {
   font-size: clamp(1.9rem, 4.9vw, 3.85rem);
-  max-width: 12.4ch;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.hero-title-line {
+  display: block;
+  width: max-content;
 }
 
 .section-heading h2,
@@ -696,9 +702,9 @@ body.photowake-legal {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(420px, 1.22fr) minmax(260px, 0.78fr);
+    grid-template-columns: minmax(520px, 1.34fr) minmax(240px, 0.66fr);
     align-items: center;
-    gap: 24px;
+    gap: 20px;
   }
 
   .section-grid {
@@ -715,7 +721,7 @@ body.photowake-legal {
   }
 
   .phone-stage {
-    width: min(100%, 320px);
+    width: min(100%, 300px);
     margin-inline: 0;
   }
 
@@ -752,12 +758,12 @@ body.photowake-legal {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(600px, 1.28fr) minmax(280px, 0.72fr);
-    gap: 36px;
+    grid-template-columns: minmax(700px, 1.42fr) minmax(250px, 0.58fr);
+    gap: 28px;
   }
 
   .phone-stage {
-    width: min(100%, 340px);
+    width: min(100%, 300px);
   }
 
   .section-grid {
