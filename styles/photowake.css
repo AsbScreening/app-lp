@@ -151,16 +151,14 @@ video {
 
 .hero h1 {
   font-size: clamp(2.5rem, 7vw, 5.2rem);
-  max-width: 8.5ch;
-  text-wrap: balance;
+  max-width: 10.5ch;
 }
 
 .section-heading h2,
 .section-head h2,
 .cta-panel h2 {
   font-size: clamp(1.9rem, 5vw, 3.3rem);
-  max-width: 11ch;
-  text-wrap: balance;
+  max-width: 16ch;
 }
 
 .hero-lead,
@@ -186,7 +184,7 @@ video {
   margin-top: 18px;
   font-size: 1.05rem;
   color: #31577f;
-  max-width: 24ch;
+  max-width: 32ch;
 }
 
 .hero-points {
@@ -441,11 +439,11 @@ video {
 .price-card p,
 .store-card p,
 .faq-item p {
-  max-width: 18ch;
+  max-width: 28ch;
 }
 
 .usecase-card p {
-  max-width: 14ch;
+  max-width: 18ch;
 }
 
 .store-badge-link {
@@ -736,12 +734,12 @@ body.photowake-legal {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.98fr);
+    grid-template-columns: minmax(520px, 1.18fr) minmax(360px, 0.82fr);
     gap: 42px;
   }
 
   .section-grid {
-    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+    grid-template-columns: minmax(340px, 0.92fr) minmax(0, 1.08fr);
     gap: 32px;
     align-items: start;
   }
