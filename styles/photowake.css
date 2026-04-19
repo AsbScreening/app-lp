@@ -480,18 +480,6 @@ video {
   display: block;
 }
 
-.store-badge-placeholder {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0 16px;
-  border: 1px dashed var(--line-strong);
-  border-radius: 14px;
-  color: var(--text-soft);
-  background: var(--surface-accent);
-}
-
 .store-contact-link {
   margin-top: 18px;
 }
