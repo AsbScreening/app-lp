@@ -43,6 +43,7 @@ app-lp/
 ├─ functions/
 │  └─ api/
 │     └─ contact.js          # Cloudflare Pages Functions
+├─ app-ads.txt               # AdMob app-ads.txt（/app-ads.txt で配信）
 ├─ index.html                # LP一覧ハブ（/）
 ├─ privacy.html              # /privacy.html -> /kinyacho/privacy
 ├─ tokutei.html              # /tokutei.html -> /kinyacho/tokutei
@@ -63,6 +64,7 @@ app-lp/
 - GitHub に push すると自動デプロイされる運用
 - 公開URL
   - `/` : LP一覧ハブ
+  - `/app-ads.txt` : AdMob app-ads.txt
   - `/kinyacho` : kinyacho LP
   - `/photowake` : photowake LP
   - `/kinyacho/privacy` : キンヤチョ プライバシーポリシー
@@ -95,6 +97,32 @@ python -m http.server 8080
 
 - アクセス: `http://localhost:8080`
 - 確認対象: レイアウト崩れ、画像表示、リンク遷移、フォーム送信導線
+
+## app-ads.txt 運用メモ
+
+- `app-ads.txt` はホスト直下の `https://lp.asb-screening.com/app-ads.txt` を正とする
+- `https://lp.asb-screening.com/photowake/` 配下には置かない
+- Cloudflare Pages はビルドなしの静的配信のため、リポジトリルートの `app-ads.txt` がそのまま `/app-ads.txt` として公開される
+- `app-ads.txt` の内容は次の1行のみとし、改変しない
+
+```text
+google.com, pub-1549455232787433, DIRECT, f08c47fec0942fa0
+```
+
+### デプロイ後の確認手順
+
+1. ブラウザで `https://lp.asb-screening.com/app-ads.txt` に直接アクセスする
+2. 表示内容が以下の1行のみであることを確認する
+
+```text
+google.com, pub-1549455232787433, DIRECT, f08c47fec0942fa0
+```
+
+3. 開発者ツールまたは `curl -i https://lp.asb-screening.com/app-ads.txt` で `200 OK` になっていることを確認する
+4. HTMLではなくプレーンテキストとして取得できることを確認する
+5. Cloudflare のキャッシュが残る場合はキャッシュパージ後に再確認する
+6. App Store のデベロッパWebサイトが `https://lp.asb-screening.com/photowake/` であることを確認する
+7. AdMob 管理画面で「アップデートを確認」を押して再検証する
 
 ## 今後の拡張メモ（任意）
 
