@@ -210,12 +210,10 @@
         <div class="store-grid">
           <article class="store-card">
             <h3>iPhone版</h3>
-            <p>現在App Store審査中です。公開後、App Storeよりダウンロードいただけます。</p>
-            <a id="app-store-link" class="store-badge-link" aria-disabled="true">
-              <img id="app-store-badge" alt="App Storeからダウンロード" hidden>
-              <span id="app-store-placeholder" class="store-badge-placeholder">App Store公式バッジを表示予定</span>
+            <p>App Storeからダウンロードできます。</p>
+            <a id="app-store-link" class="store-badge-link" href="https://apps.apple.com/jp/app/%E3%82%AD%E3%83%B3%E3%83%A4%E3%83%81%E3%83%A7/id6760176793" target="_blank" rel="noopener noreferrer">
+              <img id="app-store-badge" src="/assets/common/badges/app-store-badge-jp.svg" alt="Download on the App Store">
             </a>
-            <p class="store-subnote">公開後はApp Store URLを設定すると有効化されます。</p>
           </article>
 
           <article class="store-card">
@@ -361,7 +359,7 @@
   </script>
   <script>
     (() => {
-      const APP_STORE_URL = "";
+      const APP_STORE_URL = "https://apps.apple.com/jp/app/%E3%82%AD%E3%83%B3%E3%83%A4%E3%83%81%E3%83%A7/id6760176793";
       const APPLE_BADGE_SRC = "/assets/common/badges/app-store-badge-jp.svg";
 
       const setupStoreBadge = ({ url, src, linkId, imageId, placeholderId }) => {
