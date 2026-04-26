@@ -484,6 +484,17 @@ video {
   margin-top: 18px;
 }
 
+.document-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f9ff 100%);
+  border-color: #d9e8fb;
+  box-shadow: 0 12px 28px rgba(62, 140, 244, 0.08);
+}
+
+.document-copy p,
+.document-meta {
+  color: #4d6075;
+}
+
 .section-head {
   display: grid;
   gap: 10px;

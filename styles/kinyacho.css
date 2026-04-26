@@ -917,6 +917,23 @@ a {
   color: var(--muted);
 }
 
+.document-card {
+  border-color: #b7cbc2;
+  background: linear-gradient(145deg, #f9fcfb 0%, #e5f4ef 100%);
+  box-shadow: var(--shadow);
+}
+
+.document-button {
+  border-color: transparent;
+  background: linear-gradient(140deg, var(--mint) 0%, #58d4b8 65%, #3fc8a8 100%);
+  color: #163730;
+  box-shadow: 0 6px 20px rgba(76, 170, 145, 0.35);
+}
+
+.document-meta {
+  color: #4d5b55;
+}
+
 .back-link {
   display: inline-block;
   margin-top: 18px;
